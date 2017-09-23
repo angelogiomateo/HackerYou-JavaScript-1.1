@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Don't forget to open your console to see the output!</p>
+	<script>
+
+		var daysYear = 365;
+		var hoursDay = 24;
+		var minsHour = 60;
+		var secsMin = 60;	
+
+		//EXERCISE 1
+		//1. Ask the user for their age.
+		//2. Store the answer and convert their age into seconds.
+		//3. Log into the console their age in seconds.
+		//4. Try concatenating the answer into a sentence: Your age in seconds is --.
+
+			var age = prompt("How old are you?");
+			var ageSecs = age * daysYear * hoursDay * minsHour * secsMin;
+			console.log(ageSecs);
+			console.log(`Your age in seconds is ${ageSecs}.`);
+
+		//EXERCISE 2
+		//1. Create 3 variables that asks the user for three numbers.
+		//2. Use a function to find the maximum of the three.
+		//3. Log the answer into the console using the sentence: The maximum number is --.
+
+			var num1 = prompt("Choose a number.");
+			var num2 = prompt("Choose another number.");
+			var num3 = prompt("Choose another number.");
+			var maxNum = Math.max(num1, num2, num3);
+			console.log(`The maximum number is ${maxNum}.`);
+
+		// EXERCISE 3
+		// Write some code that finds the youngest person out of three ages.
+		// Log into the console the sentence: The youngest person is -- years old.
+
+			var siblingAge1 = prompt("What is your sibling's age?");
+			var siblingAge2 = prompt("What is your other sibling's age?");
+			var minAge = Math.min(age, siblingAge1, siblingAge2);
+			console.log(`The youngest person is ${minAge}.`);
+
+		// EXERCISE 4
+		// Write some code that returns a random number between 1 and 100.
+		// Log into the console the sentence: Your random number is --.
+		// Bonus points for returning a whole number (no decimals).
+    // Hint: Look into Math.random and Math.round
+
+    		var random = Math.random() * (100 - 1) + 1;
+    		console.log(Math.round(random));
+
+
+
+		// EXERCISE 5
+		// Write some code that adds sales tax to a price.
+		// Log into the console the sentence: "The total price with tax is $--."
+		// Bonus points if you can get it to show 2 decimals. (Google it!)
+
+			var price = prompt("What is the price?");
+			var plusTax = price * 1.13;
+			console.log(`The total price with tax is \$${Math.round(plusTax, -2)}.`);
+			console.log(`The total price with tax is \$${plusTax.toFixed(2)}.`);
+
+	</script>
+</body>
+</html>
+
+
